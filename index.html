@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjeta de invitacion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../TarjetaInvitacion/fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" href="../TarjetaInvitacion/fontawesome/css/brands.css">
+    <link rel="stylesheet" href="../TarjetaInvitacion/fontawesome/css/solid.css">
+
+    <style>
+        *{
+            background-color: black;
+        }
+        img
+        {
+            max-width: 100%;
+            transition: opacity 0.5s ease;
+            opacity: 1;
+        }
+        .hidden
+        {
+            opacity: 0;
+            
+        }
+        
+        .icons
+        {
+            background-color: #f1c4c2;   
+            transition: opacity 0.5s ease;
+            opacity: 0;
+        }
+        .icons.show
+        {
+            opacity: 1;
+        }
+        .icons.hidden
+        {
+            opacity: 0;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="color">
+        <img id="mainIMG" src="../TarjetaInvitacion/img/mainGIF.gif" alt="" style="margin-top: 18%; " >
+        
+        <div class="icons" style="height: 78px;">
+            
+          
+            <a href="https://wa.link/ro914e" style=" background-color: #f1c4c2; text-decoration: none;  ">
+                <i class="fa-brands fa-square-whatsapp fa-bounce " style="position: absolute;  color: #4d4d4d; margin-top: 20px;  margin-left: 10px;  background-color: #f1c4c2;"> Confirmar</i>
+            </a>
+        
+            <a href="https://maps.app.goo.gl/YoqG6rcvJAEaTzjG7?g_st=com.google.maps.preview.copy" style=" background-color: #f1c4c2; text-decoration: none; " >
+                <i class="fa-solid fa-magnifying-glass-location fa-bounce" style="position: absolute;  color: #4d4d4d; margin-top: 20px; margin-left: 240px;  background-color: #f1c4c2;"> Ubicacion</i>                         
+            </a> 
+                  
+                 
+        </div>
+        
+    </div>
+
+    <script>
+        const imagen = document.getElementById('mainIMG');
+        const bod = document.querySelector('.icons');
+       
+
+        let isImageOne = true;
+
+        imagen.addEventListener('click', () => {
+        imagen.classList.add('hidden');
+        bod.classList.remove('show');
+        
+
+        setTimeout(() => {
+            isImageOne = !isImageOne;
+            imagen.src = isImageOne ? '../TarjetaInvitacion/img/mainGIF.gif' : '../TarjetaInvitacion/img/endGIF.gif'; // Cambia las rutas
+            imagen.classList.remove('hidden');
+           
+           
+            bod.classList.add('show');
+            BOD.classList.remove('hidden');
+        }, 500); // Tiempo igual al de la transición
+    });
+</script>
+
+</body>
+</html>
